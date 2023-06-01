@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>portfolio</title>
+    <style>
+        body {
+            background-color:#101010;
+            margin: 0;
+            padding: 0;
+            font-family: michroma;
+        }
+
+        .nav {
+            position: relative;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 6rem;
+            background-color:#101010;
+            transform: rotateX(0);
+            transition: all 0.5s ease;
+            transform-origin: top;
+            transform-style: preserve-3d;
+        }
+
+        .nav.closed {
+            transform: rotateX(-90deg);
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            transform: rotateX(90deg);
+            transform-origin: top;
+            backface-visibility: hidden;
+        }
+
+        .nav ul a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .hamburger {
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            transition: 0.5s;
+        }
+
+        .hamburger.closed {
+            transform: rotate(90deg) translateY(-50%);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 1.875rem;
+            height: 0.125rem;
+            background-color: white;
+            margin: 0.375rem 0;
+            transition: 0.5s;
+        }
+
+        .hamburger.closed span:nth-child(1) {
+            transform: rotate(45deg) translate(0.3125rem, 0.3125rem);
+        }
+
+        .hamburger.closed span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.closed span:nth-child(3) {
+            transform: rotate(-45deg) translate(0.4375rem, -0.375rem);
+         }
+         </style>
+        <script>
+        window.onload = function() {
+            var nav = document.querySelector('.nav');
+            var hamburger = document.querySelector('.hamburger');
+
+            hamburger.onclick = function() {
+                nav.classList.toggle('closed');
+                hamburger.classList.toggle('closed');
+            };
+          };
+        </script>
+        </head>
+        <body>
+        <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="content.html">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+           </div>
+         </div>
+         <h1 class="h1">project</h1>
+         <p class="portfolio">001</p>
+         <hr class="hr">
+
+         <h1 class="h12">energy </h1>
+         <section>
+            <div>
+                <img class="nos1" src="nos17.jpg.jpg" alt="">
+            </div>
+            <div>
+                <h1 class="h1p">nos</h1>
+                <p>experience the untamed rush of nos energy Drink, designed with one objective in mind 
+                    - to fuel your competitive spirit. With a unique blend of natural ingredients, vitamins, and minerals, 
+                    we've created a beverage that doesn't just quench your thirst, it ignites your passion.</p>
+                    <img class="nos2" src="nos.20jpg.jpg" alt="">
+            </div>
+         </section>
+         <hr class="hr">
+         <p class="portfolio">002</p>
+         <section class="sectionnazare">
+            <div>
+                <img class="poto-n" src="serfing nazare21.jpg" alt="">
+            </div>
+            <div>
+                <h1 class="nazare">nazare'</h1>
+                <p class="pnazare">Welcome to Nazare'.
+                    Dive into the world of professional surfing with nazare', 
+                    the destination for world-class surfboards tailored to meet the highest standards of performance and style.</p>
+            </div>
+         </section>
+         <hr class="hr">
+         <p class="portfolio">003</p>
+       
+            <div class="bglass">
+                <h1 class="h14">web template </h1>
+              
+                    <img id="bglass" src="big.glass22.jpg" alt="">
+            </div>
+            <hr>
+            <p class="portfolio">003</p>
+            <div>
+                <h1 id="weatherapp">weather app</h1>
+            </div>
+            <article class="horizon15">
+                <img id="horizon" src="hoizon34.jpg" alt="">
+            </article>
+
+
+       
+           
+        </body>
+        </html>
